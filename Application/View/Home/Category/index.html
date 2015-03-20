@@ -1,6 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-    
 <head>
     <meta name="Generator" content="手机网" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -11,10 +9,10 @@
     </title>
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="icon" href="animated_favicon.gif" type="image/gif" />
-    <link href="Public/Admin/css/index.css" rel="stylesheet" type="text/css" media="screen"
+    <link href="Public/Home/css/index.css" rel="stylesheet" type="text/css" media="screen"
     />
-    <link href="Public/Admin/css/style.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="Public/Admin/js/common.js"></script>
+    <link href="Public/Home/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="Public/Home/js/common.js"></script>
 </head>
     
 <body>
@@ -65,18 +63,18 @@
         </div>
         <div class="logo">
             <a href="#">
-                <img src="Public/Admin/images/logo.gif">
+                <img src="Public/Home/images/logo.gif">
             </a>
         </div>
         <div class="header_intro">
-            <img src="Public/Admin/images/by_top.gif">
+            <img src="Public/Home/images/by_top.gif">
         </div>
         <div class="headerdg">
             <em>
                 抢购热线（全天24小时）
             </em>
             <p>
-                <img src="Public/Admin/images/tel1.gif">
+                <img src="Public/Home/images/tel1.gif">
             </p>
         </div>
     </div>
@@ -89,18 +87,13 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" id="navbg">
+                    <a href="index.php?p=Home&c=Category&a=index&CategoryId=4" id="navbg">
                         GSM手机
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="index.php?p=Home&c=Category&a=index&CategoryId=3">
                         双模手机
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        手机配件
                     </a>
                 </li>
                 <li>
@@ -114,7 +107,7 @@
             <SPAN class="navr_recent_l1">
                 　
             </SPAN>
-            <A onmousedown="bubble(event);" href="#" name="myliulan">
+            <A onmousedown="bubble(event);" href="javascript:void(0);" name="myliulan">
                 <a href="#" title="查看购物车">
                     <a href="#" title="查看购物车">
                         您的购物车中有 0 件商品，总计金额 ￥0.00元。
@@ -129,7 +122,7 @@
         </div>
     </div>
     <div class="nav_min_div" id="min_div">
-        <img src="Public/Admin/images/top_min.jpg">
+        <img src="Public/Home/images/top_min.jpg">
     </div>
     <div id="body">
         <div class="body_l">
@@ -155,133 +148,28 @@
                     }
                 }-->
             </script>
+            
+            <!--商品分类-->
             <div class="subnav_header">
             </div>
-            <script type="text/javascript">
-            function menu_c(o) {
-                alert(o.getElementsByTagName('ul').length);
-            }
-            </script>
             <div class="subnav">
+            <?php foreach($Categorys as $rows):?>
                 <div>
                     <span class="left">
-                        手机类型
+                        <a href="index.php?p=Home&c=Category&a=index&CategoryId=<?php echo $rows['category_id']?>"><?php echo $rows['category_name']?></a>
                     </span>
                     <span class="right subnav_right">
-                        <img src="Public/Admin/images/line.gif" border="0" id="categorie_ico1">
+                        <img src="Public/Home/images/line.gif" border="0" id="categorie_ico1">
                     </span>
                 </div>
-                <ul>
-                    <li>
-                        &nbsp;
-                        <a href="#">
-                            CDMA手机
-                        </a>
-                    </li>
-                    <li>
-                        &nbsp;
-                        <a href="#">
-                            GSM手机
-                        </a>
-                    </li>
-                    <li>
-                        &nbsp;
-                        <a href="#">
-                            3G手机
-                        </a>
-                    </li>
-                    <li>
-                        &nbsp;
-                        <a href="#">
-                            双模手机
-                        </a>
-                    </li>
-                </ul>
-                <div>
-                    <span class="left">
-                        手机配件
-                    </span>
-                    <span class="right subnav_right">
-                        <img src="Public/Admin/images/line.gif" border="0" id="categorie_ico2">
-                    </span>
-                </div>
-                <ul>
-                    <li>
-                        &nbsp;
-                        <a href="#">
-                            充电器
-                        </a>
-                    </li>
-                    <li>
-                        &nbsp;
-                        <a href="#">
-                            耳机
-                        </a>
-                    </li>
-                    <li>
-                        &nbsp;
-                        <a href="#">
-                            电池
-                        </a>
-                    </li>
-                    <li>
-                        &nbsp;
-                        <a href="#">
-                            读卡器和内存卡
-                        </a>
-                    </li>
-                </ul>
-                <div>
-                    <span class="left">
-                        充值卡
-                    </span>
-                    <span class="right subnav_right">
-                        <img src="Public/Admin/images/line.gif" border="0" id="categorie_ico3">
-                    </span>
-                </div>
-                <ul>
-                    <li>
-                        &nbsp;
-                        <a href="#">
-                            小灵通/固话充值卡
-                        </a>
-                    </li>
-                    <li>
-                        &nbsp;
-                        <a href="#">
-                            移动手机充值卡
-                        </a>
-                    </li>
-                    <li>
-                        &nbsp;
-                        <a href="#">
-                            联通手机充值卡
-                        </a>
-                    </li>
+            <?php EndForeach;?>
+                <ul id="m1" style="display:block">
                 </ul>
             </div>
-            <div class="subinfo_header">
-                <div class="left subinfo_header_left">
-                    <a href="#">
-                    </a>
-                </div>
-                <!--<div class="right subinfo_header_right"><a href="#">更多</a></div>-->
-            </div>
-            <div class="subinfo_body">
-                <ul>
-                    <li style="width:175px; overflow:hidden">
-                        <a href="#" title="很好，我很喜欢" style="color:#333333">
-                            很好，我很喜欢
-                        </a>
-                        <br />
-                        <a style="color:#333333">
-                            ecshop
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="subinfo_footer">
-            </div>
+            
+            
+            
+            
             <div class="subinfo_header">
                 <div class="subinfo_header_left_top10">
                     &nbsp;
@@ -294,13 +182,19 @@
                     <li>
                         <div class="subinfo_body_top10_l">
                             <a href="#">
-                                <img src="Public/Admin/images/17_thumb_P_1241969394537.jpg" alt=""
+                                <img src="Public/Home/images/200905/thumb_img/3_thumb_G_1241422082679.jpg" alt=""
                                 class="samllimg" />
                             </a>
                         </div>
                         <div class="subinfo_body_top10_r">
                             <p class="subinfo_body_top10_r_1">
-                                <a href="#">HTC Z710e 3G手机（灰色）WCDMA/GSM 联通定制</a>
+                                <a href="#" title="">
+                                    诺基亚原装58...
+                                </a>
+                            </p>
+                            <p class="subinfo_body_top10_r_2">
+                                <a href="#">
+                                </a>
                             </p>
                             <p class="subinfo_body_top10_r_3">
                                 ￥68元
@@ -312,16 +206,22 @@
                     <li>
                         <div class="subinfo_body_top10_l">
                             <a href="#">
-                                <img src="Public/Admin/images/17_thumb_P_1241969394537.jpg" alt=""
+                                <img src="Public/Home/images/200905/thumb_img/24_thumb_G_1241971981429.jpg" alt=""
                                 class="samllimg" />
                             </a>
                         </div>
                         <div class="subinfo_body_top10_r">
                             <p class="subinfo_body_top10_r_1">
-                                <a href="#">HTC Z710e 3G手机（灰色）WCDMA/GSM 联通定制</a>
+                                <a href="#" title="">
+                                    P806
+                                </a>
+                            </p>
+                            <p class="subinfo_body_top10_r_2">
+                                <a href="#">
+                                </a>
                             </p>
                             <p class="subinfo_body_top10_r_3">
-                                ￥68元
+                                ￥2000元
                             </p>
                         </div>
                         <div class="clear">
@@ -330,16 +230,22 @@
                     <li>
                         <div class="subinfo_body_top10_l">
                             <a href="#">
-                                <img src="Public/Admin/images/17_thumb_P_1241969394537.jpg" alt=""
+                                <img src="Public/Home/images/200905/thumb_img/12_thumb_G_1241965978410.jpg" alt=""
                                 class="samllimg" />
                             </a>
                         </div>
                         <div class="subinfo_body_top10_r">
                             <p class="subinfo_body_top10_r_1">
-                                <a href="#">HTC Z710e 3G手机（灰色）WCDMA/GSM 联通定制</a>
+                                <a href="#" title="">
+                                    摩托罗拉A81...
+                                </a>
+                            </p>
+                            <p class="subinfo_body_top10_r_2">
+                                <a href="#">
+                                </a>
                             </p>
                             <p class="subinfo_body_top10_r_3">
-                                ￥68元
+                                ￥983元
                             </p>
                         </div>
                         <div class="clear">
@@ -348,16 +254,22 @@
                     <li>
                         <div class="subinfo_body_top10_l">
                             <a href="#">
-                                <img src="Public/Admin/images/17_thumb_P_1241969394537.jpg" alt=""
+                                <img src="Public/Home/images/200905/thumb_img/9_thumb_G_1241511871555.jpg" alt=""
                                 class="samllimg" />
                             </a>
                         </div>
                         <div class="subinfo_body_top10_r">
                             <p class="subinfo_body_top10_r_1">
-                                <a href="#">HTC Z710e 3G手机（灰色）WCDMA/GSM 联通定制</a>
+                                <a href="#" title="">
+                                    诺基亚E66
+                                </a>
+                            </p>
+                            <p class="subinfo_body_top10_r_2">
+                                <a href="#">
+                                </a>
                             </p>
                             <p class="subinfo_body_top10_r_3">
-                                ￥68元
+                                ￥2298元
                             </p>
                         </div>
                         <div class="clear">
@@ -366,16 +278,22 @@
                     <li>
                         <div class="subinfo_body_top10_l">
                             <a href="#">
-                                <img src="Public/Admin/images/17_thumb_P_1241969394537.jpg" alt=""
+                                <img src="Public/Home/images/200905/thumb_img/22_thumb_G_1241971076803.jpg" alt=""
                                 class="samllimg" />
                             </a>
                         </div>
                         <div class="subinfo_body_top10_r">
                             <p class="subinfo_body_top10_r_1">
-                                <a href="#">HTC Z710e 3G手机（灰色）WCDMA/GSM 联通定制</a>
+                                <a href="#" title="">
+                                    多普达Touc...
+                                </a>
+                            </p>
+                            <p class="subinfo_body_top10_r_2">
+                                <a href="#">
+                                </a>
                             </p>
                             <p class="subinfo_body_top10_r_3">
-                                ￥68元
+                                ￥5999元
                             </p>
                         </div>
                         <div class="clear">
@@ -384,16 +302,46 @@
                     <li>
                         <div class="subinfo_body_top10_l">
                             <a href="#">
-                                <img src="Public/Admin/images/17_thumb_P_1241969394537.jpg" alt=""
+                                <img src="Public/Home/images/200905/thumb_img/20_thumb_G_1242106490058.jpg" alt=""
                                 class="samllimg" />
                             </a>
                         </div>
                         <div class="subinfo_body_top10_r">
                             <p class="subinfo_body_top10_r_1">
-                                <a href="#">HTC Z710e 3G手机（灰色）WCDMA/GSM 联通定制</a>
+                                <a href="#" title="">
+                                    三星BC01
+                                </a>
+                            </p>
+                            <p class="subinfo_body_top10_r_2">
+                                <a href="#">
+                                </a>
                             </p>
                             <p class="subinfo_body_top10_r_3">
-                                ￥68元
+                                ￥280元
+                            </p>
+                        </div>
+                        <div class="clear">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="subinfo_body_top10_l">
+                            <a href="#">
+                                <img src="Public/images/200905/thumb_img/8_thumb_G_1241425513488.jpg" alt=""
+                                class="samllimg" />
+                            </a>
+                        </div>
+                        <div class="subinfo_body_top10_r">
+                            <p class="subinfo_body_top10_r_1">
+                                <a href="#" title="">
+                                    飞利浦9@9v
+                                </a>
+                            </p>
+                            <p class="subinfo_body_top10_r_2">
+                                <a href="#">
+                                </a>
+                            </p>
+                            <p class="subinfo_body_top10_r_3">
+                                ￥399元
                             </p>
                         </div>
                         <div class="clear">
@@ -403,183 +351,210 @@
             </div>
             <div class="subinfo_footer">
             </div>
-            <div class="submessage_header">
-                &nbsp;
-            </div>
-            <div class="submessage_body">
-                <a href="#" target="_blank">
-                    <img src="Public/Admin/images/message.gif">
-                </a>
-            </div>
-            <div class="subinfo_footer">
-            </div>
         </div>
-        <div class="body_r" style=" display:inline">
-            <div class="mainbig">
-                <img src="Public/Admin/images/banner.jpg" />
-            </div>
-            <div class="clear">
-            </div>
-            <div class="mainheader">
-                <div class="weekbuy">
-                    <a href="search.php?intro=new">
-                        更多&gt;&gt;
+        <div class="body_brand_r">
+            <div class="menu">
+                当前位置:
+                <span>
+                    <a href="#">
+                        首页
                     </a>
+                    <code>
+                        &gt;
+                    </code>
+                    <a href="#">
+                        手机类型
+                    </a>
+                    <code>
+                        &gt;
+                    </code>
+                    <a href="#">
+                        GSM手机
+                    </a>
+                </span>
+            </div>
+            <div class="type_nav">
+                <ul>
+                    <li class="type_nav_li1" onClick="location.href='category.php?id=19'">
+                        <a href="#">
+                            音乐手机
+                        </a>
+                    </li>
+                    <li onClick="location.href='category.php?id=20'" class="type_nav_li2">
+                        <a href="#">
+                            GPS导航手机
+                        </a>
+                    </li>
+                    <li onClick="location.href='category.php?id=5'" class="type_nav_li3">
+                        <a href="#">
+                            超长待机
+                        </a>
+                    </li>
+                    <li onClick="location.href='category.php?id=2'" class="type_nav_li4">
+                        <a href="#">
+                            电视手机
+                        </a>
+                    </li>
+                    <li onClick="location.href='category.php?id=18'" class="type_nav_li5">
+                        <a href="#">
+                            拍照手机
+                        </a>
+                    </li>
+                    <li onClick="location.href='category.php?id=16'" class="type_nav_li6">
+                        <a href="#">
+                            双卡手机
+                        </a>
+                    </li>
+                    <li onClick="location.href='category.php?id=4'" class="type_nav_li7">
+                        <a href="#">
+                            大屏手写手机
+                        </a>
+                    </li>
+                    <li onClick="location.href='category.php?id=3'" class="type_nav_li8">
+                        <a href="#">
+                            智能手机
+                        </a>
+                    </li>
+                    <li onClick="location.href='category.php?id=17'" class="type_nav_li9">
+                        <a href="#">
+                            游戏手机
+                        </a>
+                    </li>
+                </ul>
+                <div class="clear">
                 </div>
             </div>
-            <ul class="productlist">
-                <li>
-                    <a href="#">
-                        <img src="Public/Admin/images/17_thumb_P_1241969394537.jpg" alt="诺基亚N85" />
-                    </a>
-                    <p class="pname">
-                        <a href="#" title="诺基亚N85">
-                            诺基亚N85 岁末狂降￥200！索尼（SONY）RDP-M5iP便携高品质时尚音箱
-                        </a>
-                    </p>
-                    <p class="price">
-                        ￥3010元
-                    </p>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="Public/Admin/images/17_thumb_P_1241969394537.jpg" alt="诺基亚N85" />
-                    </a>
-                    <p class="pname">
-                        <a href="#" title="诺基亚N85">
-                            诺基亚N85 岁末狂降￥200！索尼（SONY）RDP-M5iP便携高品质时尚音箱
-                        </a>
-                    </p>
-                    <p class="price">
-                        ￥3010元
-                    </p>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="Public/Admin/images/17_thumb_P_1241969394537.jpg" alt="诺基亚N85" />
-                    </a>
-                    <p class="pname">
-                        <a href="#" title="诺基亚N85">
-                            诺基亚N85 岁末狂降￥200！索尼（SONY）RDP-M5iP便携高品质时尚音箱
-                        </a>
-                    </p>
-                    <p class="price">
-                        ￥3010元
-                    </p>
-                </li>
-            </ul>
-            <div class="clear"></div>
-            <div class="mainheader">
-                <div class="lowerbuy">
-                    <a href="search.php?intro=new">
-                        更多&gt;&gt;
-                    </a>
-                </div>
+            <div class="pagelist">
+                <form method="GET" class="sort" name="listform">
+                    显示方式：
+                    <select name="sort" style="border:1px solid #ccc;">
+                        <option value="goods_id" selected>
+                            按上架时间排序
+                        </option>
+                        <option value="shop_price">
+                            按价格排序
+                        </option>
+                        <option value="last_update">
+                            按更新时间排序
+                        </option>
+                    </select>
+                    <select name="order" style="border:1px solid #ccc;">
+                        <option value="DESC" selected>
+                            倒序
+                        </option>
+                        <option value="ASC">
+                            正序
+                        </option>
+                    </select>
+                    <input type="submit" name="Public/imageField" value="Go" />
+                    <input type="hidden" name="category" value="3" />
+                    <input type="hidden" name="display" value="grid" id="display" />
+                    <input type="hidden" name="brand" value="0" />
+                    <input type="hidden" name="price_min" value="0" />
+                    <input type="hidden" name="price_max" value="0" />
+                    <input type="hidden" name="filter_attr" value="0" />
+                    <input type="hidden" name="page" value="1" />
+                </form>
             </div>
-            <ul class="productlist">
-                <li>
-                    <a href="#">
-                        <img src="Public/Admin/images/17_thumb_P_1241969394537.jpg" alt="诺基亚N85" />
-                    </a>
-                    <p class="pname">
-                        <a href="#" title="诺基亚N85">
-                            诺基亚N85 岁末狂降￥200！索尼（SONY）RDP-M5iP便携高品质时尚音箱
+            
+            
+            <!--分页列表上-->
+            <div class="page_header">
+                <form name="selectPageForm" action="/shouji/category.php" method="get">
+                    <div id="page" class="pagebar">
+                        <span class="f_l f6" style="margin-right:10px;">
+                            总计
+                            <b>
+                                <?php echo $count;?>
+                            </b>
+                            个记录
+                        </span>
+                        <span class="page_now">
+                            <?php for($i=1;$i<=$total_page;$i++):?>
+                        <a href="javascript:goPage(<?php echo $i;?>)" style="text-decoration:<?php echo $i==$page?'underline':'';?>">
+                          <?php echo $i;?>
                         </a>
-                    </p>
-                    <p class="price">
-                        ￥3010元
-                    </p>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="Public/Admin/images/17_thumb_P_1241969394537.jpg" alt="诺基亚N85" />
-                    </a>
-                    <p class="pname">
-                        <a href="#" title="诺基亚N85">
-                            诺基亚N85 岁末狂降￥200！索尼（SONY）RDP-M5iP便携高品质时尚音箱
+                            <?php Endfor;?>
+                        </span>
+                        <a class="next"   href="javascript:goPage(<?php echo $nest_page;?>)">
+                            下一页
                         </a>
-                    </p>
-                    <p class="price">
-                        ￥3010元
-                    </p>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="Public/Admin/images/17_thumb_P_1241969394537.jpg" alt="诺基亚N85" />
-                    </a>
-                    <p class="pname">
-                        <a href="#" title="诺基亚N85">
-                            诺基亚N85 岁末狂降￥200！索尼（SONY）RDP-M5iP便携高品质时尚音箱
-                        </a>
-                    </p>
-                    <p class="price">
-                        ￥3010元
-                    </p>
-                </li>
-            </ul>
-            <div class="clear"></div>
-            <div class="mainheader">
-                <div class="newproduct">
-                    <a href="search.php?intro=new">
-                        更多&gt;&gt;
-                    </a>
-                </div>
+                    </div>
+                </form>
+                <script type="Text/Javascript" language="JavaScript">
+                function goPage(page){
+                    //>>2.发出请求时将上面的pageSize也传递给服务器
+                    window.location.href="<?php echo $url;?>&page="+page;
+                }
+                </script>
             </div>
+            <!--分页列表上-->
+            
+            
+            <!--商品列表-->
             <ul class="productlist">
+                <?php if(!empty($Goods)){?>
+                <?php foreach($Goods as $rows):?>
                 <li>
                     <a href="#">
-                        <img src="Public/Admin/images/17_thumb_P_1241969394537.jpg" alt="诺基亚N85" />
+                        <img src="Public/Home/images/17_thumb_P_1241969394537.jpg" alt="<?php echo $rows['goods_name'];?>5" />
                     </a>
                     <p class="pname">
-                        <a href="#" title="诺基亚N85">
-                            诺基亚N85 岁末狂降￥200！索尼（SONY）RDP-M5iP便携高品质时尚音箱
+                        <a href="index.php?p=Home&c=Goods&a=index&GoodId=<?php echo $rows['goods_id'];?>" title="<?php echo $rows['goods_name'];?>">
+                            <?php echo $rows['goods_name'];?>
                         </a>
                     </p>
                     <p class="price">
-                        ￥3010元
+                        <?php echo $rows['shop_price'];?>
                     </p>
                 </li>
-                <li>
-                    <a href="#">
-                        <img src="Public/Admin/images/17_thumb_P_1241969394537.jpg" alt="诺基亚N85" />
-                    </a>
-                    <p class="pname">
-                        <a href="#" title="诺基亚N85">
-                            诺基亚N85 岁末狂降￥200！索尼（SONY）RDP-M5iP便携高品质时尚音箱
-                        </a>
-                    </p>
-                    <p class="price">
-                        ￥3010元
-                    </p>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="Public/Admin/images/17_thumb_P_1241969394537.jpg" alt="诺基亚N85" />
-                    </a>
-                    <p class="pname">
-                        <a href="#" title="诺基亚N85">
-                            诺基亚N85 岁末狂降￥200！索尼（SONY）RDP-M5iP便携高品质时尚音箱
-                        </a>
-                    </p>
-                    <p class="price">
-                        ￥3010元
-                    </p>
-                </li>
+                <?php Endforeach;?>
+                <?php }?>
             </ul>
+            
+            
+            <!--分页列表下-->
+            <div class="page_footer">
+                <form name="selectPageForm" action="/shouji/category.php" method="get">
+                    <div id="page" class="pagebar">
+                        <span class="f_l f6" style="margin-right:10px;">
+                            总计
+                            <b>
+                                <?php echo $count;?>
+                            </b>
+                            个记录
+                        </span>
+                        <span class="page_now">
+                            <?php for($i=1;$i<=$total_page;$i++):?>
+                        <a href="javascript:goPage(<?php echo $i;?>)" style="text-decoration:<?php echo $i==$page?'underline':'';?>">
+                          <?php echo $i;?>
+                        </a>
+                            <?php Endfor;?>
+                        </span>
+                        <a class="next"   href="javascript:goPage(<?php echo $nest_page;?>)">
+                            下一页
+                        </a>
+                    </div>
+                </form>
+            </div>
+            <!--分页列表下-->
+            
+            
+            
+            
         </div>
         <div class="clear">
         </div>
     </div>
-    </div>
     <div class="footert">
         <div class="footertl">
             <div class="footert_1">
-                <img src="Public/Admin/images/logo21.gif">
+                <img src="Public/Home/images/logo21.gif">
             </div>
             <div class="footert_2">
                 抢购热线（9:00-18:00）
                 <p>
-                    <img src="Public/Admin/images/tel2.gif">
+                    <img src="Public/Home/images/tel2.gif">
                 </p>
             </div>
         </div>

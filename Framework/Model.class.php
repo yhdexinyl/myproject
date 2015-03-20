@@ -106,7 +106,9 @@ abstract class Model {
      * 根据主键得到一行数据
      */
     public function getByPK($pk){
+        
         $sql  = "select * from {$this->table()} where {$this->fields['PK']} = $pk";
+        
         return $this->db->fetchRow($sql);
     }
 
@@ -221,12 +223,12 @@ abstract class Model {
      * @param $page
      * @param  $pageSize 用户传递过来的每页显示多少条
      */
-    public function getPageResult($page,$pageSize){
+    public function getPageResult($condition='1+1',$page,$pageSize){
         //>>1.得到当前页的数据列表
         $start = ($page-1)*$pageSize;
-        $rows = $this->getAll("1=1 limit $start,$pageSize");//  select * from it_goods where  1=1  limit $start,$pageSize
+        $rows = $this->getAll("$condition limit $start,$pageSize");//  select * from it_goods where  1=1  limit $start,$pageSize
         //>>2.得到总条数
-        $count = $this->count();
+        $count = $this->count($condition);
         return  array('rows'=>$rows,'count'=>$count);
     }
 

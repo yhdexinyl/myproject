@@ -46,7 +46,7 @@ class Framework {
      */
     private  static  function initRequest(){
 //>>1.c是用户传入的控制器
-        defined('PLATFORM_NAME') or define('PLATFORM_NAME',isset($_GET['p'])?$_GET['p']:$GLOBALS['config']['app']['default_platform']) ; //确定平台
+       defined('PLATFORM_NAME') or define('PLATFORM_NAME',isset($_GET['p'])?$_GET['p']:$GLOBALS['config']['app']['default_platform']) ; //确定平台
         defined('CONTROLLER_NAME') or define('CONTROLLER_NAME',isset($_GET['c'])?$_GET['c']:$GLOBALS['config']['app']['default_controller']);  //确定控制器
         defined('ACTION_NAME') or define('ACTION_NAME',isset($_GET['a'])?$_GET['a']:$GLOBALS['config']['app']['default_action']);  //确定控制器中的方法
 //require CONTROLLER_PATH."$p/{$c}Controller.class.php";

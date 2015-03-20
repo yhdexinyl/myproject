@@ -8,13 +8,13 @@ return array(
         'user'=>'root',
         'password'=>'123456',
         'port'=>'3306',
-        'dbname'=>'myproject',
-        'prefix'=>'my_'   //配置前缀
+        'dbname'=>'easyshop',
+        'prefix'=>'easy_'   //配置前缀
     ),
     'app'=>array(  //将来为项目提供默认值
-        'default_platform'=>'Admin',
-        'default_controller'=>'Student',
-        'default_action'=>'list',
+        'default_platform'=>'Home',
+        'default_controller'=>'user',
+        'default_action'=>'login',
     ),
     //前后台的配置信息
     'Admin'=>array(),
